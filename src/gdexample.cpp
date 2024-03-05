@@ -1,16 +1,10 @@
 #include "gdexample.hpp"
-#include <godot_cpp/classes/csg_sphere3d.hpp>
-#include <godot_cpp/classes/camera3d.hpp>
-#include <godot_cpp/classes/omni_light3d.hpp>
 
 godot::GDExample::GDExample() {
 	time_passed = 0.0;
 
-	sphere_ = new godot::CSGSphere3D;
-	sphere_->set_radius(5.0);
-	sphere_->set_radial_segments(20);
-	sphere_->set_rings(20);
-	this->add_child(sphere_);
+	Sphere sphere_(Vector3(0.0, 0.0, 0.0), 5.0, 20.0, 20.0);
+	this->add_child(&sphere_);
 
 	main_camera_ = new godot::Camera3D;
 	main_camera_->set_fov(75.0);

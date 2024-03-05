@@ -14,6 +14,7 @@ namespace godot {
 		}
 
 		ClassDB::register_class<GDExample>();
+		ClassDB::register_class<Sphere>();
 	}
 
 	void uninitialize_example_module(ModuleInitializationLevel p_level) {
