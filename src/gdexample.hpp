@@ -25,6 +25,8 @@ public:
   GDExample();
   ~GDExample();
 
+  void set_main_camera();
+
   // void _process(double delta) override;
 };
 
