@@ -5,27 +5,27 @@
 
 namespace godot {
 
-	class Sphere : public CSGSphere3D {
-		GDCLASS(Sphere, CSGSphere3D)
+class Sphere : public CSGSphere3D {
+  GDCLASS(Sphere, CSGSphere3D)
 
-	private:
-		double time_passed;
-        double radius_;
-        double radial_segments_;
-        double rings;
+private:
+  double time_passed;
+  double radius_;
+  double radial_segments_;
+  double rings;
 
-        Vector3 position_;
-        CSGSphere3D* sphere_;
+  Vector3 position_;
+  CSGSphere3D *sphere_;
 
-	protected:
-		static void _bind_methods() {}
+protected:
+  static void _bind_methods() {}
 
-	public:
-		Sphere(Vector3 position = Vector3(0.0, 0.0, 0.0), double radius = 0.5,
-                double radial_segments = 12.0, double rings = 6.0);
-		~Sphere();
-	};
+public:
+  Sphere(Vector3 position = Vector3(0.0, 0.0, 0.0), double radius = 0.5,
+         double radial_segments = 12.0, double rings = 6.0);
+  ~Sphere();
+};
 
-}
+} // namespace godot
 
 #endif
