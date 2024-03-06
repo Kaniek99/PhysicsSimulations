@@ -3,8 +3,7 @@
 #include <godot_cpp/classes/csg_sphere3d.hpp>
 
 godot::Sphere::Sphere(Vector3 position, double radius, double radial_segments,
-                      double rings)
-    : position_(position), radius_(radius), radial_segments_(radial_segments) {
+                      double rings) {
   time_passed = 0.0;
 
   sphere_ = new godot::CSGSphere3D;

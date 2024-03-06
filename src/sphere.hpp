@@ -10,11 +10,6 @@ class Sphere : public CSGSphere3D {
 
 private:
   double time_passed;
-  double radius_;
-  double radial_segments_;
-  double rings;
-
-  Vector3 position_;
   CSGSphere3D *sphere_;
 
 protected:
