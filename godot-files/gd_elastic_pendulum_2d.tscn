@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://040s08r4g42w"]
+
+[node name="ElasticPendulum2D" type="ElasticPendulum2D"]

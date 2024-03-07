@@ -1,5 +1,6 @@
 #include "register_types.h"
 
+#include "elastic_pendulum2d.hpp"
 #include "gdexample.hpp"
 
 #include <gdextension_interface.h>
@@ -15,6 +16,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 
   ClassDB::register_class<GDExample>();
   ClassDB::register_class<Sphere>();
+  ClassDB::register_class<ElasticPendulum2D>();
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {
