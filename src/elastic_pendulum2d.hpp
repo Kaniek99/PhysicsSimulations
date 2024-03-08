@@ -7,10 +7,10 @@
 
 namespace godot {
 
-const Vector2 G_FORCE = Vector2(0, 100);
+const Vector2 G_FORCE_2D = Vector2(0, 100);
 
 Vector2 calculate_pendulum_force(double spring_rate, double eq_length,
-                                 double distance, Vector2 gowno);
+                                 double distance, Vector2 position_vector);
 
 class ElasticPendulum2D : public Node2D {
   GDCLASS(ElasticPendulum2D, Node2D)

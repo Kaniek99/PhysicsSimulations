@@ -42,7 +42,7 @@ void ElasticPendulum2D::_physics_process(double delta) {
   Vector2 position_vector = body->get_position() - attachment_point;
   pendulum_force = calculate_pendulum_force(spring_rate, eq_length, distance,
                                             position_vector);
-  velocity += delta * (pendulum_force + G_FORCE);
+  velocity += delta * (pendulum_force + G_FORCE_2D);
   body->set_position(body->get_position() + delta * velocity);
   line->remove_point(1);
   line->add_point(body->get_position());
