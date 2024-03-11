@@ -5,18 +5,18 @@ namespace godot {
 ElasticPendulum2D::ElasticPendulum2D() {
   time_passed = 0.0;
 
-  body = new StaticBody2D;
+  body = memnew(StaticBody2D);
   attachment_point = Vector2(300.0, 100.0);
   eq_length = 100.0;
   spring_rate = 2.0;
   pendulum_force = Vector2(0.0, 0.0);
   velocity = Vector2(0.0, 0.0);
-  line = new Line2D;
+  line = memnew(Line2D);
 }
 
 ElasticPendulum2D::~ElasticPendulum2D() {
-  delete line;
-  delete body;
+  memdelete(line);
+  memdelete(body);
 }
 
 void ElasticPendulum2D::_draw() {
@@ -24,6 +24,7 @@ void ElasticPendulum2D::_draw() {
 }
 
 void ElasticPendulum2D::_ready() {
+  this->add_child(body);
   body->set_position(Vector2(400.0, 200.0));
   line->add_point(attachment_point);
   line->add_point(body->get_position());
